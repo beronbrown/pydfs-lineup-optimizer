@@ -26,28 +26,15 @@ class FanDuelSingleGameFootballSettings(FanDuelSingleGameSettings):
         LineupPosition('FLEX', ('QB', 'WR', 'RB', 'TE', 'K')),
     ]
 
-
 @SitesRegistry.register_settings
-class FanDuelSingleGameBasketballSettings(FanDuelSingleGameSettings):
-    sport = Sport.BASKETBALL
-    csv_importer = build_fanduel_single_game_importer(mvp=True, star=True, pro=True)
+class FanDuelSingleGameFootballNCAASettings(FanDuelSingleGameSettings):
+    sport = Sport.FOOTBALLNCAA
+    extra_rules = [FanduelSingleGameMaxQBRule]
     positions = [
         LineupPosition('MVP', ('MVP', )),
-        LineupPosition('STAR', ('STAR', )),
-        LineupPosition('PRO', ('PRO', )),
-        LineupPosition('FLEX', ('PG', 'SG', 'SF', 'PF', 'C')),
-        LineupPosition('FLEX', ('PG', 'SG', 'SF', 'PF', 'C')),
+        LineupPosition('FLEX', ('QB', 'WR', 'RB', 'TE', 'K')),
+        LineupPosition('FLEX', ('QB', 'WR', 'RB', 'TE', 'K')),
+        LineupPosition('FLEX', ('QB', 'WR', 'RB', 'TE', 'K')),
+        LineupPosition('FLEX', ('QB', 'WR', 'RB', 'TE', 'K')),
     ]
 
-
-@SitesRegistry.register_settings
-class FanDuelSingleGameLOLSettings(FanDuelSingleGameSettings):
-    sport = Sport.LEAGUE_OF_LEGENDS
-    csv_importer = build_fanduel_single_game_importer(mvp=True, star=True, pro=False)
-    positions = [
-        LineupPosition('MVP', ('MVP', )),
-        LineupPosition('STAR', ('STAR', )),
-        LineupPosition('UTIL', ('TOP', 'MID', 'ADC', 'JNG', 'SUP')),
-        LineupPosition('UTIL', ('TOP', 'MID', 'ADC', 'JNG', 'SUP')),
-        LineupPosition('UTIL', ('TOP', 'MID', 'ADC', 'JNG', 'SUP')),
-    ]

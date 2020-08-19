@@ -18,15 +18,12 @@ class DraftKingsTiersSettings(BaseSettings):
 
 
 @SitesRegistry.register_settings
-class DraftKingsTiersBasketballSettings(DraftKingsTiersSettings):
-    sport = Sport.BASKETBALL
+class DraftKingsTiersFOOTBALLSettings(DraftKingsTiersSettings):
+    sport = Sport.FOOTBALL
 
 
 @SitesRegistry.register_settings
-class DraftKingsTiersBaseballSettings(DraftKingsTiersSettings):
-    sport = Sport.BASEBALL
+class DraftKingsTiersFOOTBALLNCAASettings(DraftKingsTiersSettings):
+    sport = Sport.FOOTBALL
 
 
-@SitesRegistry.register_settings
-class DraftKingsTiersHockeySettings(DraftKingsTiersSettings):
-    sport = Sport.HOCKEY

@@ -5,9 +5,7 @@ from pydfs_lineup_optimizer.sites.draftkings.captain_mode.settings import *
 from pydfs_lineup_optimizer.sites.draftkings.tiers.settings import *
 
 __all__ = [
-    'DraftKingsCSVImporter', 'DraftKingsBasketballSettings', 'DraftKingsFootballSettings',
-    'DraftKingsHockeySettings', 'DraftKingsBaseballSettings', 'DraftKingsGolfSettings',
-    'DraftKingsSoccerSettings', 'DraftKingsCanadianFootballSettings', 'DraftKingsLOLSettings',
+    'DraftKingsCSVImporter', 'DraftKingsFootballSettings', 'DraftKingsFootballNCAASettings',
     'DraftKingsCaptainModeCSVImporter', 'DraftKingsCaptainModeFootballSettings',
-    'DraftKingsCaptainModeBasketballSettings', 'DraftKingsTiersBasketballSettings',
+    'DraftKingsCaptainModFootballNCAASettings', 'DraftKingsCaptainModeFootballSettings', 'DraftKingsTiersFOOTBALLSettings', 'DraftKingsTiersFOOTBALLNCAASettings',
 ]
