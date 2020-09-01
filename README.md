@@ -20,17 +20,17 @@ for lineup in optimizer.optimize(10):
     print(lineup)
 ```
 
-optimizer features before model is ran
-add_player_to_lineup players to include in all lineups
-remove_player_from_lineup players to remove in all lineups
-remove_player remove player from the optimization process
-restore_player restore player to the optimization process
-max_exposure set at player level or can set in optimize call for all players, Player max exposure has higher priority than max_exposure
-min_exposure set at player level or can set in optimize call for all players
-randomness can be set at the pool or player level through 
-	set_deviation 
-	min_deviation 
-	max_deviation
+optimizer features before model is ran  
+add_player_to_lineup players to include in all lineups  
+remove_player_from_lineup players to remove in all lineups  
+remove_player remove player from the optimization process  
+restore_player restore player to the optimization process  
+max_exposure set at player level or can set in optimize call for all players, Player max exposure has higher priority than max_exposure  
+min_exposure set at player level or can set in optimize call for all players  
+randomness can be set at the pool or player level through  
+	set_deviation  
+	min_deviation  
+	max_deviation  
 	
 
 ```python
@@ -56,18 +56,6 @@ brees_thomas_group = PlayersGroup([optimizer.get_player_by_name(name) for name i
 optimizer.add_stack(Stack([rodgers_adams_group, brees_thomas_group]))
 ```	
 	
-features during model optimization
-n total number of lineups
+features during model optimization  
+n total number of lineups  
 
-
-add_stack
-	
-max_from_team maximum number of players allowed from each team
-bans row_ids of players to exclude from all lineups
-stack_sizes size of each team stack
-stack_teams team three word acronym to select specific team to stack with size above
-stack_sizes2 size of each game stack if applicable
-game_stack_sizes game three word away @ three word home string to select specific game to stack with size above
-min_salary minimum salary to use
-max_exposure max exposure for all players or a vector of exposures for each player
-randomness a function that takes a vector of data and randomly perturbs it
